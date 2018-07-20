@@ -31,10 +31,10 @@ public class MicroServiceApplication implements CommandLineRunner{
 		});
 		
 		etudiantRepository.save(new Etudiant(1L,"BELKATI","Samir",new Formation(1L,null,0,null)));
-		etudiantRepository.save(new Etudiant(1L,"BELKATI","Aylane",new Formation(1L,null,0,null)));
-		etudiantRepository.save(new Etudiant(1L,"BELKATI","Dida",new Formation(1L,null,0,null)));
-		etudiantRepository.save(new Etudiant(1L,"BELKATI","Amer",new Formation(1L,null,0,null)));
-		etudiantRepository.save(new Etudiant(1L,"BELKATI","Boualem",new Formation(1L,null,0,null)));
+		etudiantRepository.save(new Etudiant(2L,"BELKATI","Aylane",new Formation(1L,null,0,null)));
+		etudiantRepository.save(new Etudiant(3L,"BELKATI","Dida",new Formation(1L,null,0,null)));
+		etudiantRepository.save(new Etudiant(2L,"BELKATI","Amer",new Formation(1L,null,0,null)));
+		etudiantRepository.save(new Etudiant(3L,"BELKATI","Boualem",new Formation(1L,null,0,null)));
 		
 		formationRepository.findAll().forEach(f -> {
 			System.out.println(f.getNom());
