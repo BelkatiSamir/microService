@@ -1,8 +1,6 @@
 package org.sid.webRest;
 
 import java.util.List;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 
 import org.sid.dao.EtudiantRepository;
 import org.sid.entities.Etudiant;
@@ -13,9 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+//@RestController
 public class EtudiantRestController {
 	 
 		@Autowired
@@ -43,7 +40,6 @@ public class EtudiantRestController {
 		}
 		
 		@DeleteMapping("/etudiants/{id}")
-		@Produces(MediaType.APPLICATION_JSON)
 		public void delete(@PathVariable(value="id") Long id){
 			 etudiantRepository.delete(id);
 		}

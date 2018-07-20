@@ -1,38 +1,32 @@
 package org.sid.entities;
 
 import java.io.Serializable;
-import java.util.Collection;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Formation implements Serializable{
+public class Salle implements Serializable{
 	
-  /**
+	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-@Id
-  @GeneratedValue
-  private Long id;
-  private String nom;
-  private int duree;
-  
-  @OneToMany(mappedBy="formation")
-  @JsonIgnore
-  private Collection<Etudiant> etudiants;
-  
-  
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long id;
+	private String nom;
+	
+
 }
